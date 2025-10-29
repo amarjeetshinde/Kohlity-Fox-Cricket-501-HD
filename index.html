@@ -173,7 +173,6 @@
             color: #fff;
             margin-bottom: 18px;
             line-height: 1.3;
-            font-family: 'Roboto', 'Poppins', sans-serif;
         }
 
         .alert-message {
@@ -182,7 +181,6 @@
             color: rgba(255, 255, 255, 0.87);
             line-height: 1.5;
             margin-bottom: 0;
-            font-family: 'Roboto', 'Poppins', sans-serif;
         }
 
         .alert-buttons {
@@ -200,7 +198,6 @@
             font-weight: 500;
             cursor: pointer;
             transition: background 0.2s ease;
-            font-family: 'Roboto', 'Poppins', sans-serif;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             border-radius: 4px;
@@ -211,40 +208,16 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .alert-btn:active {
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .alert-btn.primary {
-            color: #4db6ac;
-        }
-
-
-
         @media (max-width: 768px) {
-            .logo {
-                font-size: 2em;
-            }
-
-            .modal-content {
-                margin: 20% auto;
-                padding: 30px 20px;
-                max-width: 90%;
-            }
-
             #contentFrame {
                 height: 300px;
                 min-height: 250px;
-            }
-
-            .alert-box {
-                max-width: 320px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Alert Popup (Android-style) -->
+    <!-- Alert Popup -->
     <div id="alertPopup" class="alert-overlay">
         <div class="alert-box">
             <div class="alert-content">
@@ -264,7 +237,7 @@
         <div class="tagline">Free Cricket Streaming - Live & HD</div>
     </div>
 
-    <!-- Main Content -->
+    <!-- Main Video -->
     <div class="container">
         <div class="video-container">
             <div class="live-badge">
@@ -272,11 +245,11 @@
                 LIVE
             </div>
             <iframe id="contentFrame"
-                    src="https://www.livereacting.com/tools/hls-player-embed?url=https://rumble.com/live-hls-dvr/6ykg6g/playlist.m3u8"
-                    frameborder="0"
-                    allowfullscreen
-                    allow="autoplay; encrypted-media"
-                    sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
+                src="https://www.livereacting.com/tools/hls-player-embed?url=https://iplislive.pages.dev/copy-karne-wala-gay-copy-karne-wala-gay-bsdk-2-baap-ka.m3u8"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; encrypted-media"
+                sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
             </iframe>
         </div>
 
@@ -287,11 +260,10 @@
             </a>
         </div>
     </div>
-    
+
     <script>
         const alertPopup = document.getElementById('alertPopup');
 
-        // Alert popup functions
         function showAlert() {
             alertPopup.classList.add('active');
         }
@@ -301,12 +273,10 @@
         }
 
         function acceptAlert() {
-            // Redirect to Telegram when OK is clicked
             window.open('https://t.me/+H4SNbEBhYfA1Mzg1', '_blank');
             closeAlert();
         }
 
-        // Show alert popup immediately on page load
         window.onload = function() {
             showAlert();
         };
